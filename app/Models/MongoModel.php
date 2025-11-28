@@ -3,25 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use MongoDB\Laravel\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class MongoModel extends Model
 {
     use HasFactory;
-
-    /**
-     * The connection name for the model.
-     *
-     * @var string
-     */
-    protected $connection = 'mongodb';
-
-    /**
-     * The collection associated with the model.
-     *
-     * @var string
-     */
-    protected $collection = 'your_collection_name';
 
     /**
      * The attributes that are mass assignable.

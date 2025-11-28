@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
+    protected $table = 'reviews';
+    
     protected $fillable = [
         'review',
         'authermail',
@@ -14,8 +16,6 @@ class Review extends Model
         'image',
         'recipe_id',
     ];
-
-    protected $collection = 'reviews';
 
     /**
      * Get the recipe that the review belongs to.
