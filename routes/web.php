@@ -10,7 +10,7 @@ Route::get('/', function () {
 });
 
 // Recipes
-Route::get('/api/recipes', [RecipeController::class, 'index']);
+Route::get('/api/recipes', [RecipeController::class, 'index']); // Supports ?category=Furniture
 Route::post('/api/recipes', [RecipeController::class, 'store']);
 Route::get('/api/recipes/top', [RecipeController::class, 'top']);
 Route::get('/api/recipes/top-rated', [RecipeController::class, 'topRated']);

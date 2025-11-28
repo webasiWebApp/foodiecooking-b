@@ -12,9 +12,16 @@ class RecipeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $recipes = Recipe::all();
+        $query = Recipe::query();
+        
+        // Filter by category if provided
+        if ($request->has('category')) {
+            $query->where('category', $request->category);
+        }
+        
+        $recipes = $query->get();
         return response()->json($recipes);
     }
 

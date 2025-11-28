@@ -30,6 +30,19 @@ class Recipe extends Model
     ];
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'ingredient' => 'array',
+        'images' => 'array',
+        'rating' => 'decimal:2',
+        'cookingTime' => 'integer',
+        'postedTime' => 'datetime',
+    ];
+
+    /**
      * Get the reviews for the recipe.
      */
     public function reviews()
